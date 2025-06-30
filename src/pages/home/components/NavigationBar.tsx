@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
 import { FiArrowLeft, FiUser } from "react-icons/fi";
 import { useLocation, useNavigate } from "react-router-dom";
+import { HIDE_BACK_BUTTON_PATHS } from "@/constants/navigation";
 
 export const NavigationBar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const hideBackButtonPaths = ["/", "/login"];
-  const isShowBackButton = !hideBackButtonPaths.includes(location.pathname);
+  const isShowBackButton = !HIDE_BACK_BUTTON_PATHS.includes(location.pathname);
 
   return (
     <Nav>
