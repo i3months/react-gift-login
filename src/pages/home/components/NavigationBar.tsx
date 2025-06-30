@@ -6,12 +6,13 @@ export const NavigationBar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const isHomePage = location.pathname === "/";
+  const hideBackButtonPaths = ["/", "/login"];
+  const isShowBackButton = !hideBackButtonPaths.includes(location.pathname);
 
   return (
     <Nav>
       <Left>
-        {!isHomePage && (
+        {!isShowBackButton && (
           <IconButton onClick={() => navigate(-1)}>
             <FiArrowLeft size={24} />
           </IconButton>
