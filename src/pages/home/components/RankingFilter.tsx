@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { GENDER_FILTERS, type GenderType } from "../../../constants/ranking";
+import { GENDER_FILTERS, type GenderType } from "@/constants/ranking";
 
 type RankingFilterProps = {
   selected: GenderType;

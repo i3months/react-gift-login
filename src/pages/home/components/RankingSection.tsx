@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
-import { RankingFilter } from "./RankingFilter";
-import { RankingTab } from "./RankingTab";
-import { RankingGrid } from "./RankingGrid";
+import { RankingFilter } from "@/pages/home/components/RankingFilter";
+import { RankingTab } from "@/pages/home/components/RankingTab";
+import { RankingGrid } from "@/pages/home/components/RankingGrid";
 import {
   type GenderType,
   RANKING_TABS,
   type TabType,
-} from "../../../constants/ranking";
+} from "@/constants/ranking";
 import { LOCAL_STORAGE_KEYS } from "@/constants/localStorage";
 
 export const RankingSection = () => {

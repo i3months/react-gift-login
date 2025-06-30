@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { RANKING_TABS, type TabType } from "../../../constants/ranking";
+import { RANKING_TABS, type TabType } from "@/constants/ranking";
 
 type RankingTabProps = {
   selected: TabType;

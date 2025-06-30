@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { CategoryCard } from "./CategoryCard";
-import { mockCategoryData } from "../../../mock/mockData";
+import { CategoryCard } from "@/pages/home/components/CategoryCard";
+import { mockCategoryData } from "@/mock/mockData";
 
 export const CategorySection = () => {
   return (

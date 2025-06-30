@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { useState } from "react";
-import { RankingCard } from "./RankingCard";
-import { type GenderType, type TabType } from "../../../constants/ranking";
+import { RankingCard } from "@/pages/home/components/RankingCard";
+import { type TabType, type GenderType } from "@/constants/ranking";
 import { mockRankingData } from "@/mock/mockData";
 import { INITIAL_RANKING_COUNT } from "@/constants/grid";
 

@@ -1,7 +1,7 @@
 import { Global } from "@emotion/react";
-import { reset } from "./styles/reset";
-import { globalStyle } from "./styles/globalStyle";
-import Router from "./routes/Router";
+import { reset } from "@/styles/reset";
+import { globalStyle } from "@/styles/globalStyle";
+import Router from "@/routes/Router";
 
 function App() {
   return (
