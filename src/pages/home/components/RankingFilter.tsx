@@ -39,8 +39,12 @@ const FilterButton = styled.button<{ active: boolean }>`
         ? theme.colors.colorScale.gray.gray800
         : theme.colors.semantic.border.default};
   background-color: ${({ theme, active }) =>
-    active ? theme.colors.colorScale.gray.gray800 : "white"};
+    active
+      ? theme.colors.colorScale.gray.gray800
+      : theme.colors.semantic.background.default};
+
   color: ${({ theme, active }) =>
-    active ? "white" : theme.colors.semantic.text.default};
-  white-space: nowrap;
+    active
+      ? theme.colors.semantic.background.default
+      : theme.colors.semantic.text.default};
 `;
