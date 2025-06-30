@@ -1,5 +1,5 @@
+// src/pages/home/components/RankingSection.tsx
 import styled from "@emotion/styled";
-import { useEffect, useState } from "react";
 import { RankingFilter } from "@/pages/home/components/RankingFilter";
 import { RankingTab } from "@/pages/home/components/RankingTab";
 import { RankingGrid } from "@/pages/home/components/RankingGrid";
@@ -7,31 +7,23 @@ import {
   type GenderType,
   RANKING_TABS,
   type TabType,
+  GENDER_FILTERS,
 } from "@/constants/ranking";
 import { LOCAL_STORAGE_KEYS } from "@/constants/localStorage";
+import { useLocalStorageState } from "@/hooks/useLocalStorageState";
 
 export const RankingSection = () => {
-  const [gender, setGender] = useState<GenderType>(() => {
-    return (
-      (localStorage.getItem(LOCAL_STORAGE_KEYS.RANKING_GENDER) as GenderType) ||
-      "ALL"
-    );
-  });
+  const [gender, setGender] = useLocalStorageState<GenderType>(
+    LOCAL_STORAGE_KEYS.RANKING_GENDER,
+    "ALL",
+    GENDER_FILTERS,
+  );
 
-  const [tab, setTab] = useState<TabType>(() => {
-    return (
-      (localStorage.getItem(LOCAL_STORAGE_KEYS.RANKING_TAB) as TabType) ||
-      RANKING_TABS[0]
-    );
-  });
-
-  useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEYS.RANKING_GENDER, gender);
-  }, [gender]);
-
-  useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEYS.RANKING_TAB, tab);
-  }, [tab]);
+  const [tab, setTab] = useLocalStorageState<TabType>(
+    LOCAL_STORAGE_KEYS.RANKING_TAB,
+    RANKING_TABS[0],
+    RANKING_TABS,
+  );
 
   return (
     <Section>
